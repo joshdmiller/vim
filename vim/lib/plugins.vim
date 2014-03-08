@@ -15,20 +15,22 @@ call plug#begin( '~/.vim/plugged' )
 Plug 'MarcWeber/vim-addon-mw-utils'
 
 " Plugins that Make Vim Smarter
+Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-sensible'
 Plug 'kana/vim-smartinput'
 Plug 'tpope/vim-surround'
 Plug 'Lokaltog/vim-easymotion'
 
 " General Utilities
-Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 Plug 'kien/ctrlp.vim'
-Plug 'joshdmiller/ultisnips'
+" Plug 'joshdmiller/ultisnips'
+" Plug 'joshdmiller/vim-snippets'
 Plug 'c9s/bufexplorer'
 Plug 'bling/vim-airline'
-Plug 'mhinz/vim-startify'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'chrisbra/NrrwRgn', { 'on': [ 'NR', 'NarrowRegion', 'NarrowWindow', 'NRV' ] }
+Plug 'vim-scripts/qfn'
 
 " Git Helpers
 Plug 'tpope/vim-fugitive'
@@ -36,6 +38,8 @@ Plug 'mhinz/vim-signify'
 
 " Color Schemes
 Plug 'tpope/vim-vividchalk'
+Plug 'altercation/vim-colors-solarized'
+Plug 'chriskempson/base16-vim'
 
 " Language plugins
 Plug 'neo4j-contrib/cypher-vim-syntax'
@@ -45,9 +49,12 @@ Plug 'othree/html5.vim'
 Plug 'rosstimson/scala-vim-support'
 Plug 'groenewege/vim-less'
 Plug 'joshdmiller/vim-markdown'
-Plug 'nelstrom/vim-markdown-folding'
+" Plug 'plasticboy/vim-markdown'
 Plug 'mintplant/vim-literate-coffeescript'
 Plug 'tpope/vim-jdaddy'
+Plug 'pangloss/vim-javascript'
+Plug 'vim-scripts/JavaScript-Indent'
+Plug 'elzr/vim-json'
 
 " Programming Helpers
 Plug 'tpope/vim-commentary'
@@ -58,6 +65,7 @@ Plug 'tpope/vim-ragtag'
 Plug 'skammer/vim-css-color'
 Plug 'amiorin/vim-fenced-code-blocks'
 Plug 'junegunn/vim-easy-align'
+Plug 'othree/javascript-libraries-syntax.vim'
 
 " Done loading plugins.
 call plug#end()

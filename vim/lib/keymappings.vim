@@ -9,10 +9,6 @@ let mapleader=","
 nnoremap ; :
 
 " Disable the arrow keys and the home/end keys. Filthy habits die hard.
-inoremap  <Up>     <NOP>
-inoremap  <Down>   <NOP>
-inoremap  <Left>   <NOP>
-inoremap  <Right>  <NOP>
 noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
@@ -36,7 +32,7 @@ nnoremap <leader>ll :w <BAR> !recess <CR> | cwindow
 " It can be bloody annoying to hit the `enter` key on a completion menu and have it not only not
 " complete the selected entry, but kick me onto a new line. This changes the behavior of the `enter`
 " key so that it will just activate the completion.
-inoremap <expr> <CR> pumvisible() ? "<C-y>" : "<C-g>u<CR>"
+" inoremap <expr> <CR> pumvisible() ? '<C-y>' :'<C-g>u<CR>'
 
 " `Ctrl-n` will continue to function as it should, but continuing to type will also narrow the
 " selection, moving the highlighted entry to the next logical match.
@@ -60,4 +56,21 @@ map <leader>cc :CoffeeMake --bare <CR>| cwindow
 
 " And a little shortcut for obtaining word count:
 map <leader>wc :!wc -w %<CR>
+
+" Break a line at the cursor.
+imap <C-c> <CR><Esc>O
+
+" I frequently need to reflow paragraphs of text, so I map `Q` to this as I never use the
+" alternative.
+nnoremap Q gqap
+
+" And I like `<Space>` for folding/unfolding a single section.
+nnoremap <Space> za
+
+" Speaking of folds, I often like to "isolate" the one I'm working on by ollapsing all others.
+nnoremap zI zMzv
+
+" After I perform a search, I often want the highlighting of results to go away. So I map `\hl` to
+" toggle it.
+nnoremap <Leader>hl :nohl<CR>
 

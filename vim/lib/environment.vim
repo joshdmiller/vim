@@ -3,7 +3,7 @@
 " I like to have a darker color scheme when running GVim. Of the built-in schemes, I tend to like
 " `vividchalk`, which is one of the plugins loaded by Pathogen. I also like `moria` and
 " `Tomorrow-Night-Bright`, which are included as well.
-colorscheme vividchalk
+colorscheme base16-chalk
 
 " The majority of the time I run Vim, there is something with a defined syntax, from this very file
 " to Go source code to CoffeeScript files to stylesheets. The following option enables syntax
@@ -61,12 +61,12 @@ set autochdir
 
 " Further, when working with source code, we ask Vim to support OmniCompletion, which uses smarter
 " algorithms to look at the text prior to the cursor to try to guess what you want to type next.
-set ofu=syntaxcomplete#Complete
+" set ofu=syntaxcomplete#Complete
 
 " For the completion menu, we want on invocation for Vim to insert the longest sequence of letters
 " common to all completions, just like in an IDE like Eclipse or NetBeans. Further, we want the menu
 " to show even if there was only a single match.
-set completeopt=longest,menuone
+" set completeopt=longest,menuone
 
 " Now we want Vim to behave like other editors with regard to open files; by setting this option,
 " Vim allows us to have edited buffers "hidden" behind the current one.
