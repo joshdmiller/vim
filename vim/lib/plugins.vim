@@ -23,7 +23,8 @@ Plug 'Lokaltog/vim-easymotion'
 
 " General Utilities
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
-Plug 'kien/ctrlp.vim'
+" Plug 'kien/ctrlp.vim'
+Plug 'Shougo/unite.vim'
 " Plug 'joshdmiller/ultisnips'
 " Plug 'joshdmiller/vim-snippets'
 Plug 'c9s/bufexplorer'
@@ -31,10 +32,13 @@ Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'chrisbra/NrrwRgn', { 'on': [ 'NR', 'NarrowRegion', 'NarrowWindow', 'NRV' ] }
 Plug 'vim-scripts/qfn'
+Plug 'mileszs/ack.vim'
+Plug 'sjl/gundo.vim'
 
 " Git Helpers
 Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-signify'
+" Plug 'mhinz/vim-signify'
+Plug 'airblade/vim-gitgutter'
 
 " Color Schemes
 Plug 'tpope/vim-vividchalk'
@@ -66,6 +70,10 @@ Plug 'skammer/vim-css-color'
 Plug 'amiorin/vim-fenced-code-blocks'
 Plug 'junegunn/vim-easy-align'
 Plug 'othree/javascript-libraries-syntax.vim'
+
+" Tools that have no business in Vim but are totally bitchin' nonetheless
+Plug 'edkolev/promptline.vim'
+Plug 'edkolev/tmuxline.vim'
 
 " Done loading plugins.
 call plug#end()

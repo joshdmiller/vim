@@ -13,10 +13,17 @@
 let g:jdm_scripts_dir = 'lib/'
 let g:jdm_scripts_suffix = '.vim'
 
+" Uncomment the following to run in debug mode.
+" let g:jdm_debug = 1
+
 " This is a convenience mechanism to load a local script.
-function JdmLoadScript( name )
-  echom "Loading " . g:jdm_scripts_dir . a:name . g:jdm_scripts_suffix
-  exec ":runtime " . g:jdm_scripts_dir . a:name . g:jdm_scripts_suffix
+function! JdmLoadScript( name )
+  let script = g:jdm_scripts_dir . a:name . g:jdm_scripts_suffix
+  if exists( "g:jdm_debug" )
+    echom "[jdm] Loading " . script
+  endif
+
+  exec ":runtime " . script
 endfunction
 
 " # Load the vim configuration files

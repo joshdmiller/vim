@@ -15,19 +15,26 @@ noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 noremap   <Home>   <NOP>
 noremap   <End>    <NOP>
+inoremap  <Esc>    <NOP>
 
 " Here are a few keybindings I've included for convenience. 
 nnoremap <leader>ww :w<CR>
 
 " Also, I created a little shortcut to get back to normal mode without reaching for `<ESC>`.
-imap jj <ESC>
+inoremap jj <ESC>
+inoremap jk <ESC>
 
-" For the LessCSS plugin, I have a convenience keybinding to run the lessc command and to pipe the
-" contents to the file with the same name but with the extension `css` rather than `less`. Also, I
-" use the [RECESS](http://twitter.github.com/recess/) linter made by
-" [Twitter](http://twitter.github.com) for CSS and LESS to ensure proper styles.
-nnoremap <leader>lc :w <BAR> !lessc % > %:t:r.css<CR><space> | cwindow
-nnoremap <leader>ll :w <BAR> !recess <CR> | cwindow
+" Should I make changes to my Vim configuration, it sucks to have to close out and reload, so here's
+" a shortcut to reload my configuration.
+nnoremap <Leader>rc :source $MYVIMRC<CR>
+
+" To make navigating to the beginning and ends of lines easier, I like `H` and `L`.
+nnoremap H ^
+nnoremap H $
+
+" To more quickly access help, I create a little shortcut that will take me directly to the point
+" where I can type in the name of the feature.
+nnoremap <Leader>vh
 
 " It can be bloody annoying to hit the `enter` key on a completion menu and have it not only not
 " complete the selected entry, but kick me onto a new line. This changes the behavior of the `enter`
@@ -49,16 +56,11 @@ inoremap <expr> <C-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Es
 inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
             \ '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
 
-" Now I map a keybinding for CoffeeScript files to run the `coffeelint` command on the current file
-" on `\cl` and `:CoffeeMake` on the current file on `\cc`.
-map <leader>cl :CoffeeLint! <CR>| cwindow
-map <leader>cc :CoffeeMake --bare <CR>| cwindow
-
 " And a little shortcut for obtaining word count:
-map <leader>wc :!wc -w %<CR>
+noremap <leader>wc :!wc -w %<CR>
 
 " Break a line at the cursor.
-imap <C-c> <CR><Esc>O
+inoremap <C-c> <CR><Esc>O
 
 " I frequently need to reflow paragraphs of text, so I map `Q` to this as I never use the
 " alternative.
@@ -73,4 +75,34 @@ nnoremap zI zMzv
 " After I perform a search, I often want the highlighting of results to go away. So I map `\hl` to
 " toggle it.
 nnoremap <Leader>hl :nohl<CR>
+
+" After putting some text, I often want to "do things" to it; here's a quick binding to re-select
+" it.
+nnoremap <leader>v V`]
+
+" To easier navigate through window splits, I like to cut out the extra character.
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" To copy and paste within and without Vim, I map the usual `C-c` and `C-v`.
+vnoremap <C-c> "+y
+inoremap <C-v> <Esc>"+gpi
+
+" Map my case changing function to a key.
+vnoremap <C-u> ygv"=TwiddleCase(@")<CR>Pgv
+
+" ## Web Development
+"
+" For the LessCSS plugin, I have a convenience keybinding to run the lessc command and to pipe the
+" contents to the file with the same name but with the extension `css` rather than `less`. Also, I
+" use the [RECESS](http://twitter.github.com/recess/) linter made by
+" [Twitter](http://twitter.github.com) for CSS and LESS to ensure proper styles.
+nnoremap <leader>lc :w <BAR> !lessc % > %:t:r.css<CR><space> | cwindow
+nnoremap <leader>ll :w <BAR> !recess <CR> | cwindow
+
+" It is sometimes useful to fold an HTML tag and I don't have any folding expression in my
+" configuration, so it's nice to map something simple like this:
+nnoremap <Leader>ft Vatzf
 

@@ -14,5 +14,4 @@ function! TwiddleCase(str)
   endif
   return result
 endfunction
-vnoremap ~ ygv"=TwiddleCase(@")<CR>Pgv
 
