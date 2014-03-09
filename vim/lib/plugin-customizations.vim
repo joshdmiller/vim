@@ -23,7 +23,7 @@ function! g:goyo_before()
     silent !tmux set status off
   endif
 
-  SignifyToggle
+  GitGutterDisable
 endfunction
 
 " This function will be executed every time Goya is deactivated.
@@ -34,7 +34,7 @@ function! g:goyo_after()
     silent !tmux set status on
   endif
 
-  SignifyToggle
+  GitGutterEnable
 endfunction
 
 " Tell Goya to run those callbacks.
