@@ -1,3 +1,6 @@
 [submodule "vim/plug"]
 	path = vim/plug
 	url = https://github.com/junegunn/vim-plug.git
+[submodule "vim/neobundle"]
+	path = vim/neobundle
+	url = https://github.com/Shougo/neobundle.vim

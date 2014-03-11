@@ -89,6 +89,14 @@ nnoremap <Leader>a :Ack
 " Toggle the Gungo window to show/hide a branching tree of undo history.
 nnoremap <Leader>gu
 
+" ## Tmuxline
+"
+" There is a wonderful Vim plugin called `Tmuxline` that allows the use of Vim to style Tmux! It's
+" pretty rad. I use the `tmux` default configuration. The Airline theme integration doesn't work
+" very well for me, so I disable that here too.
+let g:tmuxline_preset = 'tmux'
+let g:airline#extensions#tmuxline#enabled = 0
+
 " ### Web Development
 "
 " Now I map a keybinding for CoffeeScript files to run the `coffeelint` command on the current file

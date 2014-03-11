@@ -36,8 +36,8 @@ setlocal foldcolumn=4
 " leave insert mode.
 augroup PROSE
   au!
-  autocmd InsertEnter * set formatoptions+=a
-  autocmd InsertLeave * set formatoptions-=a
+  autocmd InsertEnter *.{md,mkd,markdown,txt,text} set formatoptions+=a
+  autocmd InsertLeave *.{md,mkd,markdown,txt,text} set formatoptions-=a
 augroup END
 
 " It really sucks to lose work - and swap files laying around gets pretty annoying too. As such,

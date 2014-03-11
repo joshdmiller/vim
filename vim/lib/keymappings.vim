@@ -36,6 +36,12 @@ nnoremap H $
 " where I can type in the name of the feature.
 nnoremap <Leader>vh
 
+" I use regular expression seaching *constantly* in Vim, but its default way of handling it is
+" insane. If you already know regexes from Python, Perl, JavaScript, or any other language, you can
+" force Vim to behave the same way. I use the following keymappings to set that as the default.
+nnoremap / /\v
+vnoremap / /\v
+
 " It can be bloody annoying to hit the `enter` key on a completion menu and have it not only not
 " complete the selected entry, but kick me onto a new line. This changes the behavior of the `enter`
 " key so that it will just activate the completion.

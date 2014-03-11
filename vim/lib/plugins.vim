@@ -42,8 +42,10 @@ Plug 'airblade/vim-gitgutter'
 
 " Color Schemes
 Plug 'tpope/vim-vividchalk'
-Plug 'altercation/vim-colors-solarized'
-Plug 'chriskempson/base16-vim'
+" Plug 'altercation/vim-colors-solarized'
+" Plug 'chriskempson/base16-vim'
+" Plug 'joshdmiller/colour-schemes', { 'rtp': 'vim/' }
+Plug 'flazz/vim-colorschemes'
 
 " Language plugins
 Plug 'neo4j-contrib/cypher-vim-syntax'
@@ -59,6 +61,7 @@ Plug 'tpope/vim-jdaddy'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-scripts/JavaScript-Indent'
 Plug 'elzr/vim-json'
+Plug 'jnwhiteh/vim-golang'
 
 " Programming Helpers
 Plug 'tpope/vim-commentary'

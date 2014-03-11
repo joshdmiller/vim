@@ -4,7 +4,7 @@
 " `vividchalk`, which is one of the plugins loaded by Pathogen. I also like `moria` and
 " `Tomorrow-Night-Bright`, which are included as well.
 set background=dark
-colorscheme base16-chalk
+colorscheme lucius
 
 " Disable modeline processing because I don't use it and there are rumors of security problems.
 set modelines=0
@@ -29,17 +29,11 @@ set relativenumber
 " is, you can close a file out and reopen it and still use undo!
 set undofile
 
-" I use regular expression seaching *constantly* in Vim, but its default way of handling it is
-" insane. If you already know regexes from Python, Perl, JavaScript, or any other language, you can
-" force Vim to behave the same way. I use the following keymappings to set that as the default.
-nnoremap / /\v
-vnoremap / /\v
-
 " Speaking of searching, unless I use an uppercase character in my search, it doesn't make sense to
 " do a case-sensitive search. Also, I always do global replacements (i.e. replace all occurrences on
 " the line or in the selection), so typing that `g` gets annoying.
-set ignorecase
-set smartcase
+" set ignorecase
+" set smartcase
 set gdefault
 
 " How about highlighting searches *while I type*? Note: I also map `<Leader>hl` to eliminate the
