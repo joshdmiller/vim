@@ -20,6 +20,7 @@ Plug 'tpope/vim-sensible'
 Plug 'kana/vim-smartinput'
 Plug 'tpope/vim-surround'
 Plug 'Lokaltog/vim-easymotion'
+Plug 'Shougo/neocomplete.vim'
 
 " General Utilities
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
@@ -39,6 +40,7 @@ Plug 'sjl/gundo.vim'
 Plug 'tpope/vim-fugitive'
 " Plug 'mhinz/vim-signify'
 Plug 'airblade/vim-gitgutter'
+Plug 'jaxbot/github-issues.vim'
 
 " Color Schemes
 Plug 'tpope/vim-vividchalk'

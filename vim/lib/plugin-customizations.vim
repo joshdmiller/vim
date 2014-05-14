@@ -16,7 +16,7 @@ nnoremap <C-p> :Unite -buffer-name=search buffer file_rec:!<CR>
 
 " ## Goya
 " This function will be executed every time Goya is activated.
-function! g:goyo_before()
+function! g:Goyo_before()
   if has( 'gui_running' )
     set linespace=5
   elseif exists( '$TMUX' )
@@ -27,7 +27,7 @@ function! g:goyo_before()
 endfunction
 
 " This function will be executed every time Goya is deactivated.
-function! g:goyo_after()
+function! g:Goyo_after()
   if has( 'gui_running' )
     set linespace=0
   elseif exists( '$TMUX' )
@@ -38,7 +38,7 @@ function! g:goyo_after()
 endfunction
 
 " Tell Goya to run those callbacks.
-let g:goyo_callbacks = [function('g:goyo_before'), function('g:goyo_after')]
+let g:goyo_callbacks = [function('g:Goyo_before'), function('g:Goyo_after')]
 
 " Overwrite some Goya defaults
 let g:goyo_width = 105
