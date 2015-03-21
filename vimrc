@@ -38,7 +38,8 @@ call JdmLoadScript( 'keymappings' )
 " Any machine-specific settings belong in a separate file, where they will be loaded right now.
 "
 " The first file is in the user's home directory.
-if filereadable( "~/.vim.custom" )
+if filereadable( expand( "~/.vim.custom" ) )
+  echom "Loading custom"
   so ~/.vim.custom
 endif
 
