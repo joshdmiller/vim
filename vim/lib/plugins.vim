@@ -24,17 +24,18 @@ Plug 'Shougo/neocomplete.vim'
 
 " General Utilities
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
-" Plug 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 Plug 'Shougo/unite.vim'
-" Plug 'joshdmiller/ultisnips'
-" Plug 'joshdmiller/vim-snippets'
+Plug 'joshdmiller/ultisnips'
+Plug 'joshdmiller/vim-snippets'
 Plug 'c9s/bufexplorer'
 Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'chrisbra/NrrwRgn', { 'on': [ 'NR', 'NarrowRegion', 'NarrowWindow', 'NRV' ] }
+Plug 'chrisbra/NrrwRgn'
 Plug 'vim-scripts/qfn'
 Plug 'mileszs/ack.vim'
 Plug 'sjl/gundo.vim'
+Plug 'tpope/vim-dispatch'
 
 " Git Helpers
 Plug 'tpope/vim-fugitive'
@@ -51,19 +52,20 @@ Plug 'flazz/vim-colorschemes'
 
 " Language plugins
 Plug 'neo4j-contrib/cypher-vim-syntax'
-Plug 'kchmck/vim-coffee-script'
+" Plug 'kchmck/vim-coffee-script'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'othree/html5.vim'
-Plug 'rosstimson/scala-vim-support'
-Plug 'groenewege/vim-less'
+" Plug 'rosstimson/scala-vim-support'
+" Plug 'groenewege/vim-less'
 Plug 'joshdmiller/vim-markdown'
 " Plug 'plasticboy/vim-markdown'
-Plug 'mintplant/vim-literate-coffeescript'
+" Plug 'mintplant/vim-literate-coffeescript'
 Plug 'tpope/vim-jdaddy'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-scripts/JavaScript-Indent'
 Plug 'elzr/vim-json'
-Plug 'jnwhiteh/vim-golang'
+" Plug 'jnwhiteh/vim-golang'
+Plug 'mxw/vim-jsx'
 
 " Programming Helpers
 Plug 'tpope/vim-commentary'

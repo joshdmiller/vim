@@ -62,12 +62,13 @@ let NERDTreeIgnore=[ '\.o$', '\.swp$', '\~$', '\.class$' ]
 " This is just some basic setup for the UltiSnips plugin.
 let g:UltiSnipsEditSplit = 'vertical'
 
+
 " YouCompleteMe defaults to using the TAB key, which conflicts with UltiSnips.  Due to recent
 " integration efforts, the best approach is to remap the UltiSnips command key:
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<c-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
-let g:UltiSnipsListSnippets = '<c-m>'
+let g:UltiSnipsListSnippets = '<c-tab>'
 
 " ## Other Plugins' Configuration
 "
@@ -88,6 +89,12 @@ nnoremap <Leader>a :Ack
 
 " Toggle the Gungo window to show/hide a branching tree of undo history.
 nnoremap <Leader>gu
+
+" Bind the Dispatch build process to a key.
+nnoremap <Leader>gl :Dispatch<CR>
+
+" Set some build defaults for the Dispatch plugin.
+let b:dispatch = 'gulp test'
 
 " ## Tmuxline
 "
@@ -112,4 +119,7 @@ let g:user_emmet_settings = {
 " This is the set of libraries for which I want syntax support when using the
 " `othree/javascript-libraries-syntax` plugin.
 let g:used_javascript_libs = 'angularjs,angularui,jasmine'
+
+" Support JSX in .js files too.
+let g:jsx_ext_required = 0
 
