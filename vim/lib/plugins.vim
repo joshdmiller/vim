@@ -42,6 +42,7 @@ Plug 'reedes/vim-textobj-sentence'
 Plug 'reedes/vim-wordy'
 Plug 'reedes/vim-wheel'
 Plug 'reedes/vim-lexical'
+Plug 'junegunn/limelight.vim'
 
 " Git Helpers
 Plug 'tpope/vim-fugitive'

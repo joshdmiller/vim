@@ -48,6 +48,10 @@ let g:goyo_margin_bottom = 2
 " Activate Goya with \<Space>
 nnoremap <Leader><Space> :Goyo<CR>
 
+" Activate Limelight when we enter Goyo.
+autocmd User GoyoEnter Limelight
+autocmd User GoyoLeave Limelight!
+
 " ## NERDTree Configuration
 "
 " One of the plugins I use is [NERDTree](https://github.com/scrooloose/nerdtree), a file tree
