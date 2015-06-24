@@ -88,7 +88,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 nnoremap <Leader>a :Ack
 
 " Toggle the Gungo window to show/hide a branching tree of undo history.
-nnoremap <Leader>gu
+nnoremap <Leader>gu :GundoToggle
 
 " Bind the Dispatch build process to a key.
 nnoremap <Leader>gl :Dispatch<CR>
