@@ -94,7 +94,7 @@ nnoremap <C-l> <C-w>l
 
 " To copy and paste within and without Vim, I map the usual `C-c` and `C-v`.
 vnoremap <C-c> "+y
-inoremap <C-v> <Esc>"+gpi
+inoremap <C-v> <Esc>"+gpa
 cnoremap <C-v> <C-r>+
 
 " Map my case changing function to a key.
