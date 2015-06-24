@@ -30,11 +30,7 @@ nnoremap <Leader>rc :source $MYVIMRC<CR>
 
 " To make navigating to the beginning and ends of lines easier, I like `H` and `L`.
 nnoremap H ^
-nnoremap H $
-
-" To more quickly access help, I create a little shortcut that will take me directly to the point
-" where I can type in the name of the feature.
-nnoremap <Leader>vh
+nnoremap L $
 
 " I use regular expression seaching *constantly* in Vim, but its default way of handling it is
 " insane. If you already know regexes from Python, Perl, JavaScript, or any other language, you can
@@ -57,11 +53,6 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' : '<C-x><C-o><C-n><C-p><C-r>=pumvis
 inoremap <expr> <C-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
             \ '<C-x><C-o><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
 
-" Open the user completion menu, closing the previous one if open, and opening a new menu without
-" changing the text.
-inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
-            \ '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
-
 " And a little shortcut for obtaining word count:
 noremap <leader>wc :!wc -w %<CR>
 
@@ -73,7 +64,7 @@ inoremap <C-c> <CR><Esc>O
 nnoremap Q gqap
 
 " And I like `<Space>` for folding/unfolding a single section.
-nnoremap <Space> za
+" nnoremap <Space> za
 
 " Speaking of folds, I often like to "isolate" the one I'm working on by ollapsing all others.
 nnoremap zI zMzv
