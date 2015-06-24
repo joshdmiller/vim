@@ -102,13 +102,6 @@ vnoremap <C-u> ygv"=TwiddleCase(@")<CR>Pgv
 
 " ## Web Development
 "
-" For the LessCSS plugin, I have a convenience keybinding to run the lessc command and to pipe the
-" contents to the file with the same name but with the extension `css` rather than `less`. Also, I
-" use the [RECESS](http://twitter.github.com/recess/) linter made by
-" [Twitter](http://twitter.github.com) for CSS and LESS to ensure proper styles.
-nnoremap <leader>lc :w <BAR> !lessc % > %:t:r.css<CR><space> | cwindow
-nnoremap <leader>ll :w <BAR> !recess <CR> | cwindow
-
 " It is sometimes useful to fold an HTML tag and I don't have any folding expression in my
 " configuration, so it's nice to map something simple like this:
 nnoremap <Leader>ft Vatzf

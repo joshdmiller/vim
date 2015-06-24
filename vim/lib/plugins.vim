@@ -37,34 +37,31 @@ Plug 'mileszs/ack.vim'
 Plug 'sjl/gundo.vim'
 Plug 'tpope/vim-dispatch'
 
+" Writing
+Plug 'reedes/vim-textobj-sentence'
+Plug 'reedes/vim-wordy'
+Plug 'reedes/vim-wheel'
+Plug 'reedes/vim-lexical'
+
 " Git Helpers
 Plug 'tpope/vim-fugitive'
-" Plug 'mhinz/vim-signify'
 Plug 'airblade/vim-gitgutter'
 Plug 'jaxbot/github-issues.vim'
 
 " Color Schemes
 Plug 'tpope/vim-vividchalk'
-" Plug 'altercation/vim-colors-solarized'
-" Plug 'chriskempson/base16-vim'
-" Plug 'joshdmiller/colour-schemes', { 'rtp': 'vim/' }
 Plug 'flazz/vim-colorschemes'
 
 " Language plugins
 Plug 'neo4j-contrib/cypher-vim-syntax'
-" Plug 'kchmck/vim-coffee-script'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'othree/html5.vim'
-" Plug 'rosstimson/scala-vim-support'
-" Plug 'groenewege/vim-less'
 Plug 'joshdmiller/vim-markdown'
 " Plug 'plasticboy/vim-markdown'
-" Plug 'mintplant/vim-literate-coffeescript'
 Plug 'tpope/vim-jdaddy'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-scripts/JavaScript-Indent'
 Plug 'elzr/vim-json'
-" Plug 'jnwhiteh/vim-golang'
 Plug 'mxw/vim-jsx'
 
 " Programming Helpers

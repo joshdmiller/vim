@@ -34,11 +34,11 @@ setlocal foldcolumn=4
 " auto-formatting to occur while simply moving lines about and such in normal mode. So I use an
 " autogroup to enable auto-formatting when I enter insert mode and then disable it again when I
 " leave insert mode.
-augroup PROSE
-  au!
-  autocmd InsertEnter *.{md,mkd,markdown,txt,text} set formatoptions+=a
-  autocmd InsertLeave *.{md,mkd,markdown,txt,text} set formatoptions-=a
-augroup END
+" augroup PROSE
+"   au!
+"   autocmd InsertEnter *.{md,mkd,markdown,txt,text} set formatoptions+=a
+"   autocmd InsertLeave *.{md,mkd,markdown,txt,text} set formatoptions-=a
+" augroup END
 
 " It really sucks to lose work - and swap files laying around gets pretty annoying too. As such,
 " when writing, I like to enable the `autowrite` feature which will automatically save the current

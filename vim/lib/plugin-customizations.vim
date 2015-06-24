@@ -106,11 +106,6 @@ let g:airline#extensions#tmuxline#enabled = 0
 
 " ### Web Development
 "
-" Now I map a keybinding for CoffeeScript files to run the `coffeelint` command on the current file
-" on `\cl` and `:CoffeeMake` on the current file on `\cc`.
-map <leader>cl :CoffeeLint! <CR>| cwindow
-map <leader>cc :CoffeeMake --bare <CR>| cwindow
-
 " Use two space indentation for emmet/zencoding
 let g:user_emmet_settings = {
       \  'indentation' : '  ',
@@ -122,4 +117,8 @@ let g:used_javascript_libs = 'angularjs,angularui,jasmine'
 
 " Support JSX in .js files too.
 let g:jsx_ext_required = 0
+
+" Lexical Configuration
+let g:lexical#thesaurus = [ '/usr/share/thesaurus/moby-thesaurus.txt' ]
+let g:lexical#spelllang = ['en_us','en_gb',]
 
