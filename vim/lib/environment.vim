@@ -4,7 +4,9 @@
 " `vividchalk`, which is one of the plugins loaded by Pathogen. I also like `moria` and
 " `Tomorrow-Night-Bright`, which are included as well.
 set background=dark
-colorscheme lucius
+colorscheme nord
+let g:nord_cursor_line_number_background = 1
+let g:nord_italic_comments = 1
 
 " Disable modeline processing because I don't use it and there are rumors of security problems.
 set modelines=0

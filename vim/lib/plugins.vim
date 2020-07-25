@@ -24,8 +24,8 @@ Plug 'Shougo/neocomplete.vim'
 
 " General Utilities
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
-Plug 'kien/ctrlp.vim'
-Plug 'Shougo/unite.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'Shougo/unite.vim'
 Plug 'joshdmiller/ultisnips'
 Plug 'joshdmiller/vim-snippets'
 Plug 'c9s/bufexplorer'
@@ -52,6 +52,7 @@ Plug 'jaxbot/github-issues.vim'
 " Color Schemes
 Plug 'tpope/vim-vividchalk'
 Plug 'flazz/vim-colorschemes'
+Plug 'arcticicestudio/nord-vim'
 
 " Language plugins
 Plug 'neo4j-contrib/cypher-vim-syntax'
@@ -64,6 +65,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'vim-scripts/JavaScript-Indent'
 Plug 'elzr/vim-json'
 Plug 'mxw/vim-jsx'
+Plug 'jparise/vim-graphql'
 
 " Programming Helpers
 Plug 'tpope/vim-commentary'

@@ -3,16 +3,17 @@
 " ## Unite
 "
 " Though I use Unite, I like to make it work a little more like ctrlp.
-let g:unite_enable_start_insert = 1
-let g:unite_winheight = 20
-let g:unite_split_rule = 'botright'
+" let g:unite_enable_start_insert = 1
+" let g:unite_winheight = 20
+" let g:unite_split_rule = 'botright'
 
 " And just for kicks, how about a more interesting prompt than `> `?
-let g:unite_prompt = '» '
+" let g:unite_prompt = '» '
 
 " Importantly, I use Unite to open new files by pattern and, since I'm used to CtrlP (and that I use
 " Mod4+p in Xmonad), I map it the same.
-nnoremap <C-p> :Unite -buffer-name=search buffer file_rec:!<CR>
+" nnoremap <C-p> :Unite -buffer-name=search buffer file_rec:!<CR>
+nnoremap <C-p> :CtrlP
 
 " ## Goya
 " This function will be executed every time Goya is activated.
