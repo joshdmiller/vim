@@ -1,8 +1,6 @@
 " # Configure Basic Editor Options
 
-" I like to have a darker color scheme when running GVim. Of the built-in schemes, I tend to like
-" `vividchalk`, which is one of the plugins loaded by Pathogen. I also like `moria` and
-" `Tomorrow-Night-Bright`, which are included as well.
+" I like to have a darker color scheme when running GVim.
 set background=dark
 colorscheme nord
 let g:nord_cursor_line_number_background = 1

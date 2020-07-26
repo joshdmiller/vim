@@ -1,19 +1,13 @@
 " # Plugin Customizations
 "
-" ## Unite
-"
-" Though I use Unite, I like to make it work a little more like ctrlp.
-" let g:unite_enable_start_insert = 1
-" let g:unite_winheight = 20
-" let g:unite_split_rule = 'botright'
+" ## CtrlP
 
-" And just for kicks, how about a more interesting prompt than `> `?
-" let g:unite_prompt = '» '
+" Importantly, I use CtrlP to open new files by pattern (and I use Mod4+p in Xmonad), so I map it
+" similarly.
+nnoremap <C-p> :CtrlP<CR>
 
-" Importantly, I use Unite to open new files by pattern and, since I'm used to CtrlP (and that I use
-" Mod4+p in Xmonad), I map it the same.
-" nnoremap <C-p> :Unite -buffer-name=search buffer file_rec:!<CR>
-nnoremap <C-p> :CtrlP
+" For the CtrlP plugin, I want to ignore any files matching these patterns:
+set wildignore+=*/tmp/*,*.so,*.sw*,*.zip,*.tar.*,*.tar,.git/*,*/node_modules/*,*/vendor/*,*/build/*
 
 " ## Goya
 " This function will be executed every time Goya is activated.
@@ -76,9 +70,6 @@ let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 let g:UltiSnipsListSnippets = '<c-tab>'
 
 " ## Other Plugins' Configuration
-"
-" For the CtrlP plugin, I want to ignore any files matching these patterns:
-set wildignore+=*/tmp/*,*.so,*.sw*,*.zip,*.tar.*,*.tar,.git/*,*/node_modules/*,*/vendor/*,*/build/*,*/bin/*
 
 " Automatically populate the g:airline_symbols dictionary with the powerline symbols.
 let g:airline_powerline_fonts = 1
@@ -92,22 +83,8 @@ let g:indent_guides_enable_on_vim_startup = 1
 " Ack is awesome. Nuff said.
 nnoremap <Leader>a :Ack
 
-" Toggle the Gungo window to show/hide a branching tree of undo history.
-nnoremap <Leader>gu :GundoToggle
-
-" Bind the Dispatch build process to a key.
-nnoremap <Leader>gl :Dispatch<CR>
-
-" Set some build defaults for the Dispatch plugin.
-let b:dispatch = 'gulp test'
-
-" ## Tmuxline
-"
-" There is a wonderful Vim plugin called `Tmuxline` that allows the use of Vim to style Tmux! It's
-" pretty rad. I use the `tmux` default configuration. The Airline theme integration doesn't work
-" very well for me, so I disable that here too.
-let g:tmuxline_preset = 'tmux'
-let g:airline#extensions#tmuxline#enabled = 0
+" Toggle the Undotree window to show/hide a branching tree of undo history.
+nnoremap <Leader>ut :UndotreeToggle<CR>
 
 " ### Web Development
 "
@@ -116,14 +93,10 @@ let g:user_emmet_settings = {
       \  'indentation' : '  ',
       \}
 
-" This is the set of libraries for which I want syntax support when using the
-" `othree/javascript-libraries-syntax` plugin.
-let g:used_javascript_libs = 'angularjs,angularui,jasmine'
-
 " Support JSX in .js files too.
 let g:jsx_ext_required = 0
 
 " Lexical Configuration
 let g:lexical#thesaurus = [ '/usr/share/thesaurus/moby-thesaurus.txt' ]
-let g:lexical#spelllang = ['en_us','en_gb',]
+let g:lexical#spelllang = ['en_us', 'en_gb']
 

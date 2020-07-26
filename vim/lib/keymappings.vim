@@ -38,21 +38,6 @@ nnoremap L $
 nnoremap / /\v
 vnoremap / /\v
 
-" It can be bloody annoying to hit the `enter` key on a completion menu and have it not only not
-" complete the selected entry, but kick me onto a new line. This changes the behavior of the `enter`
-" key so that it will just activate the completion.
-" inoremap <expr> <CR> pumvisible() ? '<C-y>' :'<C-g>u<CR>'
-
-" `Ctrl-n` will continue to function as it should, but continuing to type will also narrow the
-" selection, moving the highlighted entry to the next logical match.
-inoremap <expr> <C-n> pumvisible() ? '<C-n>' : '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-inoremap <expr> <M-,> pumvisible() ? '<C-n>' : '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-
-" Open the omni completion menu, closing the previous one if open, and opening a new menu without
-" changing the text:
-inoremap <expr> <C-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
-            \ '<C-x><C-o><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
-
 " And a little shortcut for obtaining word count:
 noremap <leader>wc :!wc -w %<CR>
 
@@ -63,10 +48,7 @@ inoremap <C-c> <CR><Esc>O
 " alternative.
 nnoremap Q gqap
 
-" And I like `<Space>` for folding/unfolding a single section.
-" nnoremap <Space> za
-
-" Speaking of folds, I often like to "isolate" the one I'm working on by ollapsing all others.
+" For folds, I often like to "isolate" the one I'm working on by ollapsing all others.
 nnoremap zI zMzv
 
 " After I perform a search, I often want the highlighting of results to go away. So I map `\hl` to
