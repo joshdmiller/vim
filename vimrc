@@ -28,10 +28,10 @@ endfunction
 
 " # Load the vim configuration files
 call JdmLoadScript( 'plugins' )
-call JdmLoadScript( 'plugin-customizations' )
 call JdmLoadScript( 'functions' )
 call JdmLoadScript( 'environment' )
 call JdmLoadScript( 'keymappings' )
+call JdmLoadScript( 'plugin-customizations' )
 
 " # Per-Machine/User/Project Customizations
 "

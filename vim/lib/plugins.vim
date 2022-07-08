@@ -35,14 +35,16 @@ Plug 'Lokaltog/vim-easymotion'
 
 " completion engine, requiring no tabs
 " this requires _manual_ compilation after Plug installation!
-Plug 'valloric/youcompleteme'
+" Plug 'valloric/youcompleteme'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " ####
 " General Utilities
 " ####
 
 " a file finder
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf.vim'
 
 " snippets!
 Plug 'sirver/ultisnips'
@@ -87,7 +89,7 @@ Plug 'reedes/vim-lexical'
 " ####
 " Git Helpers
 " ####
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " ####
@@ -101,7 +103,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'neo4j-contrib/cypher-vim-syntax'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'othree/html5.vim'
-Plug 'godlygeek/tabular'
+"Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-jdaddy'
 Plug 'pangloss/vim-javascript'
@@ -109,6 +111,7 @@ Plug 'vim-scripts/JavaScript-Indent'
 Plug 'elzr/vim-json'
 Plug 'mxw/vim-jsx'
 Plug 'jparise/vim-graphql'
+Plug 'HerringtonDarkholme/yats.vim'
 
 " ####
 " Programming Helpers

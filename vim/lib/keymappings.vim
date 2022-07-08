@@ -8,6 +8,9 @@ let mapleader=","
 " purpose?
 nnoremap ; :
 
+" Allow saving of files as sudo when I forgot to start vim using sudo
+cmap w!! w !sudo tee > /dev/null %
+
 " Disable the arrow keys and the home/end keys. Filthy habits die hard.
 noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>

@@ -69,7 +69,7 @@ set tabstop=2
 
 " I very much like the `Clean`, `Terminus`, and `Source Code Pro` fonts. This sets one as the
 " default when using GVim.
-set guifont=Source\ Code\ Pro\ Semi-Bold\ 11
+set guifont=Source\ Code\ Pro\ Semi-Bold\ 14
 
 " I prefer not to keep file history in the menus of GVim.
 let g:bmenu_max_pathlen=0
@@ -107,4 +107,18 @@ if has( "gui_running" )
   set guioptions-=m
   set guioptions-=T
 endif
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+" set signcolumn=number
 
